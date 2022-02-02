@@ -9,7 +9,7 @@ export default function ChooseRoleBlock({role, setRole, showModal}) {
     <>
       <div className="choose-block">
         <DescriptionBlock role={role}/>
-        <ButtonBlock setRole={setRole} role={role}/>
+        <ButtonBlock setRole={setRole} role={role} showModal={showModal}/>
       </div>
       <GuideFlowBlock role={role} showModal={showModal}/>
     </>

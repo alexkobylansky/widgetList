@@ -5,18 +5,18 @@ import CancelButton from "./CancelButton";
 import BorrowerIcon from "./BorrowerIcon";
 import LenderIcon from "./LenderIcon";
 
-export default function ButtonBlock({role, setRole}) {
+export default function ButtonBlock({role, setRole, showModal}) {
   if (role === "Borrower") {
     return (
       <div className="button-block">
-        <GoToCabinetButton icon={<BorrowerIcon/>}/>
+        <GoToCabinetButton icon={<BorrowerIcon/>} showModal={showModal}/>
         <CancelButton setRole={setRole}/>
       </div>
     )
   } else if (role === "Lender") {
     return (
       <div className="button-block">
-        <GoToCabinetButton icon={<LenderIcon/>}/>
+        <GoToCabinetButton icon={<LenderIcon/>} showModal={showModal}/>
         <CancelButton setRole={setRole}/>
       </div>
     )
