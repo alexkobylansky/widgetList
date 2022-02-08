@@ -19,11 +19,7 @@ export default function TermsConditions({isOpen, hideModal}) {
           successButton.classList.add('active');
           setDisabled(false);
         }
-        /*console.log('Высота дива:', mainDescriptionBlock.clientHeight);
-        console.log('Высота параграфа:', mainText.scrollHeight);
-        console.log('Высота прокрутки:', mainDescriptionBlock.scrollTop);
-        console.log('Позиция параграфа внизу:', pagePosition);*/
-      })
+      });
     }
   },[isOpen]);
 
@@ -57,7 +53,6 @@ export default function TermsConditions({isOpen, hideModal}) {
                 tempore!
               </p>
             </div>
-            <div className="mask"/>
             <button type={"button"} disabled={disabled} onClick={hideModal} className="btn success-btn disabled"><span className="icon"><SuccessIcon/></span>I Agree</button>
           </div>
         </div>
